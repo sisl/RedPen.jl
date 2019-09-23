@@ -84,8 +84,14 @@ function decrypt_payload!(payload::Dict, ws::HTTP.WebSockets.WebSocket, passwd::
         decrypted_data::String = String(trim_padding_PKCS5(deciphertext))
         T = eval(Meta.parse(payload["type"]))
         if typeof(decrypted_data) <: String
-            data::T = parse(T, decrypted_data)
-            payload["data"] = data
+            if T == String
+                # Use data directly if it's already a String
+                payload["data"] = decrypted_data
+            else
+                # Parse as type T
+                data::T = parse(T, decrypted_data)
+                payload["data"] = data
+            end
         else
             senderror(ws, "Submission is not a Dict type.")
         end
