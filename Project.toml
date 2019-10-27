@@ -1,7 +1,7 @@
 name = "RedPen"
 uuid = "6500d021-ed42-4427-8819-7be88027218e"
 authors = ["Robert Moss <mossr@stanford.edu>"]
-version = "0.1.0"
+version = "0.2.0"
 
 [deps]
 HTTP = "cd3eb016-35fb-5094-929b-558a96fad6f3"

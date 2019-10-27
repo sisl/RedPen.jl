@@ -1,6 +1,6 @@
 # RedPen: Client/Server configuration for WebSockets
 
-const SUCCESS = "Submission successful"
+const SUCCESS = "Success"
 
 mutable struct File
   name::String
