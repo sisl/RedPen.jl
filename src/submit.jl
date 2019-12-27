@@ -12,7 +12,6 @@ end
 #   args[1] = projectX.ext file, projectX/ directory, or status keyword
 #   args[2] = email address of submitter
 #   submit_func = course specific submit function
-
 function submit(submit_func::Function, args::Vector{String})
     if length(args) >= 2
         yes::Bool = false
@@ -43,3 +42,5 @@ function submit(submit_func::Function, args::Vector{String})
                 submit status email@stanford.edu""")
     end
 end
+
+@deprecate submit(args::Vector{String}, submit_func::Function) submit(submit_func, args)
