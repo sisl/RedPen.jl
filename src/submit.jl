@@ -13,7 +13,7 @@ end
 #   args[2] = email address of submitter
 #   submit_func = course specific submit function
 
-function submit(args::Vector{String}, submit_func::Function)
+function submit(submit_func::Function, args::Vector{String})
     if length(args) >= 2
         yes::Bool = false
         project_data::String = args[1]
