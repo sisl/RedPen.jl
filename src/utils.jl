@@ -2,6 +2,16 @@
 
 const SUCCESS = "Success"
 
+function resetpayload()
+    payload::Dict{String,Any} = Dict{String,Any}(
+        "time"=>"",
+        "email"=>"",
+        "nickname"=>"",
+        "data"=>NaN,
+        "type"=>"String",
+        "project"=>"")
+end
+
 mutable struct File
   name::String
   content::Vector{UInt8}
