@@ -23,16 +23,6 @@ module RedPen
         File,
         SUCCESS
 
-    function resetpayload()
-        payload::Dict{String,Any} = Dict{String,Any}(
-            "time"=>"",
-            "email"=>"",
-            "nickname"=>"",
-            "data"=>NaN,
-            "type"=>"String",
-            "project"=>"")
-    end
-
     include("utils.jl") # Utility functions
     include("submit.jl") # Command line submit script
 
