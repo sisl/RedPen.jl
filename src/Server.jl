@@ -5,7 +5,6 @@ using ..RedPen
 using HTTP
 using JSON
 using Nettle
-using Obfuscatee
 
 export listen
 

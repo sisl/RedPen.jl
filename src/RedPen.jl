@@ -6,7 +6,6 @@
 =#
 module RedPen
     using JSON
-    using Obfuscatee
 
     import Base.parse
 
